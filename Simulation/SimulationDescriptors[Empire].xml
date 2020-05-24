@@ -2,6 +2,7 @@
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
 
     <SimulationDescriptor Name="ClassEmpire" Type="Class">
+        <!--ADDED-->
         <!-- SCALING ROOTING COMPATIBILITY-->
     
         <Modifier TargetProperty="GameSpeedMultiplier"                Operation="Multiplication"    Value="$(GameSpeedMultiplier)"            Path="ClassEmpire//ClassShip"/>
@@ -38,6 +39,9 @@
     
         <Property Name="LifeforceConduitCount"                BaseValue="0" MinValue="0"/>
         <Property Name="LifeforceExcess"               Value="0"/>
+        <!--/ADDED-->
+
+
         <!-- ########################################################## -->
         <!-- ######################## PROPERTY ######################## -->
         <!-- ########################################################## -->

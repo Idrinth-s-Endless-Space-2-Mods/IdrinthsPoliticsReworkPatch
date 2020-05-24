@@ -2,6 +2,9 @@
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
 
     <SimulationDescriptor Name="ClassSenate" Type="Class">
+        <!--ADDED-->
+        <Property Name="LawActivationCostModifier" BaseValue="1" MinValue="0"/>
+        <!--/ADDED-->
         <Property Name="ActiveLawsCount" Composition="Sum"/>
 
         <Property Name="TurnsBetweenElections"      BaseValue="20" MinValue="Negative"/>
@@ -80,22 +83,22 @@
         
         <Property Name="ElectionActionCost"              BaseValue="1" MinValue="-0.95"/>
 		
-		<!-- Rebellion -->
-		<Property Name="RebellionStarSystemIncreasePerTurn" 						BaseValue="10" />
-		<Property Name="RebellionStarSystemDecreasePerTurn" 						BaseValue="10" />
-		<Property Name="RebellionStarSystemTriggerValue"	 						BaseValue="100" MinValue="0"   MaxValue="100"  />
-		<Property Name="RebellionArmyMilitaryPowerPerPopulation"		 			BaseValue="300" />
-		<Property Name="RebellionSuppressionAction_InvestManpowerCost" 				BaseValue="10" />
-		<Property Name="RebellionSuppressionAction_InvestManpowerSuppressionValue" 	BaseValue="20" />
-		<Property Name="RebellionSuppressionAction_InvestManpowerDuration" 			BaseValue="5" />
-		<Property Name="RebellionSuppressionAction_InvestLuxuryCost" 				BaseValue="25" />
-		<Property Name="RebellionSuppressionAction_InvestLuxurySuppressionValue" 	BaseValue="25" />
-		<Property Name="RebellionSuppressionAction_InvestLuxuryDuration" 			BaseValue="10" />
+        <!-- Rebellion -->
+        <Property Name="RebellionStarSystemIncreasePerTurn" 						BaseValue="10" />
+        <Property Name="RebellionStarSystemDecreasePerTurn" 						BaseValue="10" />
+        <Property Name="RebellionStarSystemTriggerValue"	 						BaseValue="100" MinValue="0"   MaxValue="100"  />
+        <Property Name="RebellionArmyMilitaryPowerPerPopulation"		 			BaseValue="300" />
+        <Property Name="RebellionSuppressionAction_InvestManpowerCost" 				BaseValue="10" />
+        <Property Name="RebellionSuppressionAction_InvestManpowerSuppressionValue" 	BaseValue="20" />
+        <Property Name="RebellionSuppressionAction_InvestManpowerDuration" 			BaseValue="5" />
+        <Property Name="RebellionSuppressionAction_InvestLuxuryCost" 				BaseValue="25" />
+        <Property Name="RebellionSuppressionAction_InvestLuxurySuppressionValue" 	BaseValue="25" />
+        <Property Name="RebellionSuppressionAction_InvestLuxuryDuration" 			BaseValue="10" />
 		
-		<Property Name="RebellionEmpireIncreasePerTurn" 							BaseValue="5"  />
-		<Property Name="RebellionEmpireDecreasePerTurn" 							BaseValue="5"  />
-		<Property Name="RebellionEmpireDecreasePerSuppressionAction" 				BaseValue="10" />
-		<Property Name="RebellionEmpireTriggerValue"	 							BaseValue="100" MinValue="0"   MaxValue="100"  />
+        <Property Name="RebellionEmpireIncreasePerTurn" 							BaseValue="5"  />
+        <Property Name="RebellionEmpireDecreasePerTurn" 							BaseValue="5"  />
+        <Property Name="RebellionEmpireDecreasePerSuppressionAction" 				BaseValue="10" />
+        <Property Name="RebellionEmpireTriggerValue"	 							BaseValue="100" MinValue="0"   MaxValue="100"  />
 
 
         <Property Name="ElectionCount" 							    BaseValue="0" RoundingFunction="Floor" />
