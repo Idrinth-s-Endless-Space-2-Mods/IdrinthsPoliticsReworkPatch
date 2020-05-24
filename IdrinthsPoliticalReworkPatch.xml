@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="Documentation/Schemas/Amplitude.Unity.Runtime.RuntimeModule.xsd">
+
+    <RuntimeModule Name="IdrinthsPoliticsReworkPatch" Type="Extension" Version="0.43">
+
+        <Title>Idrinth's Politics Rework Patch</Title>
+        <Description>This Mod tries to fix issues caused by some outdated files in Politics Reworked (). It is currently early ALPHA - treat it as such and report propblems please.
+            
+            Source code can be found at, contributions are always welcome.
+        </Description>
+        <Author>Idrinth</Author>
+        <Homepage>#</Homepage>
+        <PreviewImageFile>iprp.jpg</PreviewImageFile>
+        <ReleaseNotes>For Political Rework Version 0.43</ReleaseNotes>
+        <Tags>Gameplay, Balance, MajorFactions</Tags>
+
+        <Plugins>
+            <DatabasePlugin DataType="Amplitude.Unity.Simulation.SimulationDescriptor, Assembly-CSharp-firstpass">
+                <FilePath>Simulation/SimulationDescriptors.xml</FilePath>
+                <FilePath>Simulation/SimulationDescriptors[*].xml</FilePath>
+            </DatabasePlugin>
+        </Plugins>
+    </RuntimeModule>
+</Datatable>
