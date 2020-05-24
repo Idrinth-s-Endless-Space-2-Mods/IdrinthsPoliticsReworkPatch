@@ -39,6 +39,11 @@
     
         <Property Name="LifeforceConduitCount"                BaseValue="0" MinValue="0"/>
         <Property Name="LifeforceExcess"               Value="0"/>
+        
+        <Property Name="UsesDictatorshipFreeLaws"        BaseValue="0" MinValue ="0" MaxValue="1"/>
+        <Property Name="DictatorshipFreeLaws"            BaseValue="2"/>
+        <Property Name="DictatorshipNonFreeLawsCount"    BaseValue="0" MinValue="0"/>
+        <Property Name="DictatorshipLawsCostMalus"       BaseValue="0"/>
         <!--/ADDED-->
 
 
