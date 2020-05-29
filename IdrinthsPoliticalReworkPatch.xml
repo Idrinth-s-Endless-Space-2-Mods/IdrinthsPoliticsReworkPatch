@@ -4,7 +4,7 @@
     <RuntimeModule Name="IdrinthsPoliticsReworkPatch" Type="Extension" Version="0.43">
 
         <Title>Idrinth's Politics Rework Patch</Title>
-        <Description>This Mod tries to fix issues caused by some outdated files in Politics Reworked. It is currently early ALPHA - treat it as such and report propblems please.
+        <Description>This Mod tries to fix issues caused by some outdated files in Politics Reworked. It is still WIP - treat it as such and report problems please.
             
 Source code can be found at https://github.com/Idrinth-s-Endless-Space-2-Mods/IdrinthsPoliticsReworkPatch, contributions are always welcome.
         </Description>
