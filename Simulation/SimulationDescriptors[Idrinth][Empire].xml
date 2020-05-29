@@ -3,43 +3,16 @@
 
     <SimulationDescriptor Name="ClassEmpire" Type="Class">
         <!--ADDED-->
-        <!-- SCALING ROOTING COMPATIBILITY-->
-    
-        <Modifier TargetProperty="GameSpeedMultiplier"                Operation="Multiplication"    Value="$(GameSpeedMultiplier)"            Path="ClassEmpire//ClassShip"/>
-        <Modifier TargetProperty="SystemCount"                        Operation="Multiplication"    Value="$(OwnedSystems)"                    Path="ClassEmpire//ClassShip"/>
-    
         <!--  POLITICAL REWORK  -->
-            
         <Property Name="NumberOfHeroesOnSystems" BaseValue="0"/>
-    
         <Property Name="EmpireBattleLost"/>
-        <Modifier TargetProperty="WarsWon"                     Operation="Addition" Value="$(WarsWon)"                    Priority="1" Path="../ClassEmpire/ClassColonizedStarSystem" />
-            
-        <Modifier TargetProperty="IsNotAtWar"                     Operation="Subtraction" Value="$(WarCount)"                    Priority="1" Path="../ClassEmpire/ClassColonizedStarSystem" />
-        <Modifier TargetProperty="IsAtWar"                     Operation="Addition" Value="$(WarCount)"                 Priority="1"   Path="../ClassEmpire/ClassColonizedStarSystem" />
-    
         <Property Name="HeroCountProduction" BaseValue="0"/>
-        <Modifier TargetProperty="SystemProduction"     Operation="Percent"     Value="$(HeroCountProduction)" Path="../ClassEmpire/ClassColonizedStarSystem"/>
-    
         <Property Name="HeroCountResearch" BaseValue="0"/>
-        <Modifier TargetProperty="SystemResearch"     Operation="Percent"     Value="$(HeroCountResearch)" Path="../ClassEmpire/ClassColonizedStarSystem"/>
-    
         <Property Name="HeroCountFIDSI" BaseValue="0"/>
-        <Modifier TargetProperty="SystemFIDSIPercent"     Operation="Addition"     Value="$(HeroCountFIDSI)" Path="../ClassEmpire/ClassColonizedStarSystem"/>
-    
         <Property Name="HeroCountPressure" BaseValue="0"/>
-        <Modifier TargetProperty="BasePressureMultiplier"     Operation="Percent"     Value="$(HeroCountPressure)" Path="../ClassEmpire/ClassDiplomacy"/>
-    
         <!-- VODYANI REWORK COMPATIBILITY-->
-    
-        <BinaryModifier TargetProperty="LifeforceExcess" Operation="Addition" Left="$(NetEmpireLifeforce)" BinaryOperation="Addition" Right="$(EmpireLifeforceStock)" Path="ClassEmpire"  Priority="-2"/>
-        <Modifier TargetProperty="LifeforceExcess" Operation="Subtraction" Value="$(MaximumEmpireLifeforceStock)" Path="ClassEmpire"  Priority="-2"/>
-    
-        <BinaryModifier TargetProperty="NetLifeforceExcess" Operation="Addition" Left="$(LifeforceExcess)" BinaryOperation="Division" Right="$(LifeforceConduitCount)" Path="ClassEmpire/ClassColonizedStarSystem/StarSystemImprovementFoodToIndustryVampirilis" Priority="-1"/>
-    
         <Property Name="LifeforceConduitCount"                BaseValue="0" MinValue="0"/>
-        <Property Name="LifeforceExcess"               Value="0"/>
-        
+        <Property Name="LifeforceExcess"               BaseValue="0"/>
         <Property Name="UsesDictatorshipFreeLaws"        BaseValue="0" MinValue ="0" MaxValue="1"/>
         <Property Name="DictatorshipFreeLaws"            BaseValue="2"/>
         <Property Name="DictatorshipNonFreeLawsCount"    BaseValue="0" MinValue="0"/>
@@ -808,6 +781,23 @@
         <!-- QUEST -->
         <Property Name="ConsecutiveTurnsLeadingAcademyRequest" BaseValue="0" IsSealed="true"/>
 
+        <!--ADDED-->
+        <!-- SCALING ROOTING COMPATIBILITY-->
+        <Modifier TargetProperty="GameSpeedMultiplier"                Operation="Multiplication"    Value="$(GameSpeedMultiplier)"            Path="ClassEmpire//ClassShip"/>
+        <Modifier TargetProperty="SystemCount"                        Operation="Multiplication"    Value="$(OwnedSystems)"                    Path="ClassEmpire//ClassShip"/>
+        <!--  POLITICAL REWORK  -->
+        <Modifier TargetProperty="WarsWon"                     Operation="Addition" Value="$(WarsWon)"                    Priority="1" Path="../ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="IsNotAtWar"                     Operation="Subtraction" Value="$(WarCount)"                    Priority="1" Path="../ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="IsAtWar"                     Operation="Addition" Value="$(WarCount)"                 Priority="1"   Path="../ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="SystemProduction"     Operation="Percent"     Value="$(HeroCountProduction)" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="SystemResearch"     Operation="Percent"     Value="$(HeroCountResearch)" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="SystemFIDSIPercent"     Operation="Addition"     Value="$(HeroCountFIDSI)" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="BasePressureMultiplier"     Operation="Percent"     Value="$(HeroCountPressure)" Path="../ClassEmpire/ClassDiplomacy"/>
+        <!-- VODYANI REWORK COMPATIBILITY-->
+        <BinaryModifier TargetProperty="LifeforceExcess" Operation="Addition" Left="$(NetEmpireLifeforce)" BinaryOperation="Addition" Right="$(EmpireLifeforceStock)" Path="ClassEmpire"  Priority="-2"/>
+        <Modifier TargetProperty="LifeforceExcess" Operation="Subtraction" Value="$(MaximumEmpireLifeforceStock)" Path="ClassEmpire"  Priority="-2"/>
+        <BinaryModifier TargetProperty="NetLifeforceExcess" Operation="Addition" Left="$(LifeforceExcess)" BinaryOperation="Division" Right="$(LifeforceConduitCount)" Path="ClassEmpire/ClassColonizedStarSystem/StarSystemImprovementFoodToIndustryVampirilis" Priority="-1"/>
+        <!--/ADDED-->
         <!-- ########################################################## -->
         <!-- ######################## MODIFIER ######################## -->
         <!-- ########################################################## -->
